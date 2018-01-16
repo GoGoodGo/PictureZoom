@@ -40,13 +40,14 @@ class ImageZoomCell: UICollectionViewCell, UIScrollViewDelegate {
     // MARK: - Customized
     /** 设置缩放比例 */
     fileprivate func setZoom(scale: CGFloat) {
-        
+        // 缩放比例限制（在最大最小中间）
         lastScale = max(min(scale, maxScale), minScale)
         imgView.transform = CGAffineTransform.init(scaleX: lastScale, y: lastScale)
         
         let imageW = imgView.frame.size.width
         let imageH = imgView.frame.size.height
         if lastScale > 1 {
+            // 内边距是针对 scrollView 捏合缩放，图片居中设置的边距
             scrollView.contentInset = UIEdgeInsets.zero // 内边距清空
             // 修改中心点
             imgView.center = CGPoint.init(x: imageW / 2, y: imageH / 2)
@@ -71,8 +72,8 @@ class ImageZoomCell: UICollectionViewCell, UIScrollViewDelegate {
         
         var tapX: CGFloat = tapPoint.x
         var tapY: CGFloat = tapPoint.y
-        if imgView.frame.minX == 0 {
-            // 将 tap superview 的 point 转换到 imageView
+        if imgViewSize.width == viewSize.width {
+            // 将 tap superview 的 point 转换 tap 到 imageView 上的距离
             tapY = tapPoint.y - (viewSize.height - imgViewSize.height) / 2
         } else {
             tapX = tapPoint.x - (viewSize.width - imgViewSize.width) / 2
@@ -111,13 +112,16 @@ class ImageZoomCell: UICollectionViewCell, UIScrollViewDelegate {
     
     /** 双击放大 */
     @objc func doubleTap(tap: UITapGestureRecognizer) {
+        // 获取点击的位置
         let point = tap.location(in: self)
+        // 根据点击的位置计算偏移量
         calculateOffset(tapPoint: point)
         
         if lastScale > 1 {
             lastScale = 1
         } else {
             lastScale = maxScale
+            // 单击手势放在这里
             let singleTap = UITapGestureRecognizer.init(target: self, action: #selector(singleTap(tap:)))
             addGestureRecognizer(singleTap)
         }

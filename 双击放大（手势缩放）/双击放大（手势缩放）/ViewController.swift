@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 //        view.addSubview(imgZoom)
 
         /** xib */
-        imgZoomView.imgs = [#imageLiteral(resourceName: "welcome.png"), #imageLiteral(resourceName: "probe_direct_list.png")]
+        imgZoomView.imgs = [#imageLiteral(resourceName: "welcome.png"), #imageLiteral(resourceName: "probe_direct_list.png"), #imageLiteral(resourceName: "kk.PNG")]
     }
     
     

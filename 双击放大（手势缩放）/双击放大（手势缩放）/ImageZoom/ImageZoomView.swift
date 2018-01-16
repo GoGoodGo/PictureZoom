@@ -63,7 +63,7 @@ class ImageZoomView: UIView, UICollectionViewDelegate, UICollectionViewDataSourc
         get {
             let layout = UICollectionViewFlowLayout()
             layout.itemSize = CGSize.init(width: width, height: height)
-            layout.minimumLineSpacing = 10
+            layout.minimumLineSpacing = 0
             layout.minimumInteritemSpacing = 0
             layout.scrollDirection = .horizontal
             return layout

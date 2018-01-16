@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CBB57D0200D9CC400BD8E3C /* kk.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 7CBB57CF200D9CC400BD8E3C /* kk.PNG */; };
 		7CD13FE21FECA4BE00B59AB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD13FE11FECA4BE00B59AB5 /* AppDelegate.swift */; };
 		7CD13FE41FECA4BE00B59AB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD13FE31FECA4BE00B59AB5 /* ViewController.swift */; };
 		7CD13FE71FECA4BE00B59AB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD13FE51FECA4BE00B59AB5 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7CBB57CF200D9CC400BD8E3C /* kk.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kk.PNG; sourceTree = "<group>"; };
 		7CD13FDE1FECA4BE00B59AB5 /* 双击放大（手势缩放）.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "双击放大（手势缩放）.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD13FE11FECA4BE00B59AB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CD13FE31FECA4BE00B59AB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				7CD13FF31FECA57700B59AB5 /* ImageZoom */,
 				7CD13FE11FECA4BE00B59AB5 /* AppDelegate.swift */,
 				7CD13FE31FECA4BE00B59AB5 /* ViewController.swift */,
+				7CBB57CF200D9CC400BD8E3C /* kk.PNG */,
 				7CD13FFA1FECB46E00B59AB5 /* welcome.png */,
 				7CD13FFC1FEE3CD600B59AB5 /* probe_direct_list.png */,
 				7CD13FE51FECA4BE00B59AB5 /* Main.storyboard */,
@@ -147,6 +150,7 @@
 				7CD13FEC1FECA4BE00B59AB5 /* LaunchScreen.storyboard in Resources */,
 				7CD13FE91FECA4BE00B59AB5 /* Assets.xcassets in Resources */,
 				7CD13FFB1FECB46E00B59AB5 /* welcome.png in Resources */,
+				7CBB57D0200D9CC400BD8E3C /* kk.PNG in Resources */,
 				7CD13FE71FECA4BE00B59AB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
